@@ -333,5 +333,5 @@ function setLanguage(lang) {
 }
 
 function getCurrentLang() {
-  return localStorage.getItem('lamar-lang') || 'ar';
+  return localStorage.getItem('lamar-lang') || 'en';
 }
