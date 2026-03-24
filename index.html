@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>افتح شركتك الأوروبية من قبرص | LAMAR</title>
+  <meta name="description" content="سجّل شركتك في قبرص، الاتحاد الأوروبي، بضريبة 12.5% فقط. €999 لمرة واحدة. بدون سفر. خلال أسبوعين.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+
+<!-- Loader -->
+<div id="pageLoader">
+  <div class="loader-brand">
+    <svg width="36" height="26" viewBox="0 0 40 28" fill="none"><path d="M20 2C14 8 6 10 2 8c4 6 10 10 18 18C28 18 34 14 38 8c-4 2-12 0-18-6z" fill="#C9A84C" opacity="0.9"/><path d="M20 8c-4 4-10 6-14 5 4 4 9 7 14 13 5-6 10-9 14-13-4 1-10-1-14-5z" fill="#C9A84C" opacity="0.45"/></svg>
+    <span>LAMAR</span>
+  </div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <p class="loader-text">Cyprus Company Registration</p>
+</div>
+
+<!-- Mobile overlay + menu -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#why" class="mobile-nav-link" data-i18n="nav.why">لماذا قبرص؟</a>
+  <a href="#package" class="mobile-nav-link" data-i18n="nav.package">العرض</a>
+  <a href="#process" class="mobile-nav-link" data-i18n="nav.steps">الخطوات</a>
+  <a href="#faq" class="mobile-nav-link" data-i18n="nav.faq">الأسئلة الشائعة</a>
+  <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">تواصل معنا</a>
+  <div style="margin-top:20px">
+    <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">ابدأ الآن</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header id="header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg width="28" height="20" viewBox="0 0 40 28" fill="none"><path d="M20 2C14 8 6 10 2 8c4 6 10 10 18 18C28 18 34 14 38 8c-4 2-12 0-18-6z" fill="#C9A84C"/><path d="M20 8c-4 4-10 6-14 5 4 4 9 7 14 13 5-6 10-9 14-13-4 1-10-1-14-5z" fill="#C9A84C" opacity="0.45"/></svg>
+      <span data-i18n="nav.logo">LAMAR</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#why" data-i18n="nav.why">لماذا قبرص؟</a></li>
+      <li><a href="#package" data-i18n="nav.package">العرض</a></li>
+      <li><a href="#process" data-i18n="nav.steps">الخطوات</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a></li>
+    </ul>
+    <div class="header-actions">
+      <button class="lang-btn" id="langToggle">EN</button>
+      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">ابدأ الآن</a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="images/kyrenia-harbor.png" alt="" aria-hidden="true" class="hero-bg-img">
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <canvas id="heroCanvas"></canvas>
+
+  <!-- Badge — floats on castle side (top-left in RTL) -->
+  <div class="hero-badge">
+    <span class="hb-fire">🔥</span>
+    <span data-i18n="hero.badge">ضريبة شركات في الاتحاد الأوروبي 12.5%</span>
+  </div>
+
+  <div class="hero-inner">
+
+    <!-- 2. Headline -->
+    <h1 class="hero-title" data-i18n="hero.title" data-typed-text="افتح شركة أوروبية بضريبة 12.5% فقط، بدون سفر">
+      افتح شركة أوروبية بضريبة 12.5% فقط، بدون سفر
+    </h1>
+
+    <!-- 3. Price line -->
+    <div class="hero-price-line">
+      <span class="hpl-amount">€999 <small class="hpl-vat">+ VAT</small></span>
+      <span class="hpl-sep">·</span>
+      <span class="hpl-desc" data-i18n="hero.price">إعداد لمرة واحدة · وصول أوروبي مدى الحياة</span>
+    </div>
+
+    <!-- 4. Free offer -->
+    <div class="hero-free-offer">
+      <span>🎁</span>
+      <span data-i18n="hero.free">يشمل 4 أشهر مجاناً سكرتارية وعنوان مسجّل</span>
+    </div>
+
+<!-- 6. CTA Buttons -->
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.cta1">احصل على شركتك الأوروبية</a>
+      <a href="#contact" class="btn btn-outline btn-lg" data-i18n="hero.cta2">استشارة مجانية</a>
+    </div>
+
+    <!-- 7. Social proof -->
+    <div class="hero-social-proof">
+      <div class="hsp-row">
+        <span class="hsp-stars">⭐⭐⭐⭐⭐</span>
+        <span class="hsp-rating" data-i18n="hero.rating">4.9/5 من 120+ مؤسس</span>
+      </div>
+      <div class="hsp-row">
+        <span class="hsp-countries" data-i18n="hero.countries">موثوق من رواد أعمال في 15+ دولة</span>
+      </div>
+    </div>
+
+<!-- 9. Trust pills -->
+    <div class="hero-trust-pills">
+      <div class="htp-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-i18n="trust.eu">شركة مسجّلة في الاتحاد الأوروبي</span>
+      </div>
+      <div class="htp-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>12.5% Corporate Tax</span>
+      </div>
+      <div class="htp-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-i18n="trust.remote">100% عن بُعد</span>
+      </div>
+      <div class="htp-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-i18n="trust.time">جاهزة خلال ~14 يوم</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — WHY CYPRUS
+═══════════════════════════════════════ -->
+<section class="why-section" id="why">
+
+  <!-- Blurred EU Stars background header -->
+  <div class="why-header">
+    <div class="why-header-bg">
+      <img src="images/cyprus-eu-stars.png" alt="" aria-hidden="true">
+    </div>
+    <div class="why-header-overlay"></div>
+    <div class="why-header-content">
+      <div class="section-tag">Why Cyprus</div>
+      <h2 class="section-title" data-i18n="why.title">لماذا قبرص؟</h2>
+      <p class="section-intro" data-i18n="why.intro">بوابتك العملية إلى السوق الأوروبي. موقع استراتيجي، بيئة ضريبية تنافسية، وإطار قانوني شفاف يجذب رواد الأعمال والشركات الدولية.</p>
+    </div>
+  </div>
+
+  <!-- Feature cards -->
+  <div class="section why-cards">
+    <div class="section-inner">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🇪🇺</div>
+          <h3 data-i18n="why.f1.title">عضو في الاتحاد الأوروبي</h3>
+          <p data-i18n="why.f1.desc">شركة ضمن دولة عضو في الاتحاد الأوروبي</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3 data-i18n="why.f2.title">ضريبة 12.5%</h3>
+          <p data-i18n="why.f2.desc">ضريبة شركات تنافسية بنسبة 12.5%</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚖️</div>
+          <h3 data-i18n="why.f3.title">بيئة أعمال منظمة</h3>
+          <p data-i18n="why.f3.desc">بيئة أعمال أوروبية منظمة وشفافة</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3 data-i18n="why.f4.title">موقع استراتيجي</h3>
+          <p data-i18n="why.f4.desc">موقع استراتيجي بين أوروبا والشرق الأوسط</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3 data-i18n="why.f5.title">إدارة عن بُعد</h3>
+          <p data-i18n="why.f5.desc">مرونة في التأسيس والإدارة عن بُعد</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3 data-i18n="why.f6.title">مناسبة للجميع</h3>
+          <p data-i18n="why.f6.desc">مناسبة للمستثمرين، الشركات الدولية، ورواد الأعمال</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — PACKAGE
+═══════════════════════════════════════ -->
+<section class="section package-section" id="package">
+  <div class="section-inner">
+    <div class="section-tag">Package</div>
+    <h2 class="section-title" data-i18n="package.title">ماذا يشمل عرض €999؟</h2>
+    <p class="section-intro" data-i18n="package.intro">كل ما تحتاجه لتأسيس شركتك الأوروبية من البداية إلى النهاية، بسعر واحد شامل بدون رسوم خفية.</p>
+
+    <div class="package-layout">
+      <!-- Certificate image -->
+      <div class="cert-wrap">
+        <img src="images/cyprus-certificate.png" alt="Cyprus Certificate of Incorporation" class="cert-img" loading="lazy">
+        <div class="cert-caption">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span data-i18n="package.cert_caption">هذا ما ستستلمه: شهادة تأسيس رسمية معتمدة</span>
+        </div>
+      </div>
+
+      <!-- Checklist + price -->
+      <div class="package-right">
+        <ul class="package-list">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i1">تسجيل شركة رسمي وقانوني في قبرص</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i2">إعداد وتقديم مستندات التأسيس</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i3">حجز اسم الشركة وتقديمه للموافقة</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i4">إصدار مستندات وشهادات الشركة الرسمية</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i5">4 أشهر مجاناً سكرتارية</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i6">4 أشهر مجاناً عنوان مسجل</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i7">متابعة إجراءات التسجيل حتى صدور الشركة</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i8">دعم كامل خلال خطوات التأسيس</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="package.i9">تنفيذ الإجراءات عن بُعد بدون حضور شخصي</span></li>
+        </ul>
+
+        <div class="price-card">
+          <div class="price-tag">€999</div>
+          <div class="price-vat">+ VAT</div>
+          <div class="price-features">
+            <div class="price-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="package.nofee">بدون رسوم خفية</span></div>
+            <div class="price-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-i18n="package.timeline">المدة التقديرية: ~أسبوعان</span></div>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="width:100%" data-i18n="package.cta">احصل على شركتك الآن</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — PROCESS
+═══════════════════════════════════════ -->
+<section class="section process-section" id="process">
+  <div class="section-inner">
+    <div class="section-tag">Process</div>
+    <h2 class="section-title section-center-title" data-i18n="steps.title">كيف يعمل؟</h2>
+    <p class="section-intro section-center-intro" data-i18n="steps.intro">أربع خطوات بسيطة تفصلك عن شركتك الأوروبية</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="ps-num">01</div>
+        <div class="ps-icon">💬</div>
+        <h3 data-i18n="steps.s1.title">شارك الاسم المقترح</h3>
+        <p data-i18n="steps.s1.desc">أرسل الاسم المقترح للشركة — يُفضَّل أكثر من خيار لزيادة فرص الموافقة.</p>
+      </div>
+      <div class="ps-arrow">→</div>
+      <div class="process-step">
+        <div class="ps-num">02</div>
+        <div class="ps-icon">📄</div>
+        <h3 data-i18n="steps.s2.title">قدّم الوثائق الأساسية</h3>
+        <p data-i18n="steps.s2.desc">جواز سفر، إثبات عنوان، بيانات الشركاء إن وجدوا، وطبيعة النشاط.</p>
+      </div>
+      <div class="ps-arrow">→</div>
+      <div class="process-step">
+        <div class="ps-num">03</div>
+        <div class="ps-icon">⚙️</div>
+        <h3 data-i18n="steps.s3.title">نتولى الإجراءات</h3>
+        <p data-i18n="steps.s3.desc">نجهّز الملف القانوني ونقدّمه رسمياً للجهات المختصة في قبرص.</p>
+      </div>
+      <div class="ps-arrow">→</div>
+      <div class="process-step">
+        <div class="ps-num">04</div>
+        <div class="ps-icon">🎉</div>
+        <h3 data-i18n="steps.s4.title">تستلم شركتك</h3>
+        <p data-i18n="steps.s4.desc">بعد حوالي أسبوعين، تصدر شركتك رسمياً مع كامل الوثائق القانونية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — TAX ADVANTAGE
+═══════════════════════════════════════ -->
+<section class="section tax-section" id="tax">
+  <div class="section-inner">
+    <div class="tax-layout">
+      <div class="tax-content">
+        <div class="section-tag">Tax Advantages</div>
+        <h2 class="section-title" data-i18n="tax.title">مزايا ضريبية تنافسية</h2>
+        <div class="tax-stats-row">
+          <div class="tax-stat">
+            <div class="tax-stat-num">12.5%</div>
+            <div class="tax-stat-label" data-i18n="tax.rate_label">ضريبة الشركات</div>
+          </div>
+          <div class="tax-stat-divider"></div>
+          <div class="tax-stat">
+            <div class="tax-stat-num tax-stat-num--dim">2.5%</div>
+            <div class="tax-stat-label">IP Box Regime</div>
+          </div>
+        </div>
+        <div class="callout-box" data-i18n="tax.callout">
+          شركات التكنولوجيا المؤهلة قد تستفيد من IP Box بمعدل فعّال يصل إلى 2.5% على الأرباح المؤهلة.
+        </div>
+        <p class="disclaimer" data-i18n="tax.disclaimer">تحديد الاستفادة يعتمد على طبيعة النشاط وهيكل الدخل المؤهل.</p>
+
+        <!-- Tax comparison bars -->
+        <div class="tax-compare">
+          <p class="tax-compare-label" data-i18n="tax.compare_label">مقارنة ضريبة الشركات في أوروبا</p>
+          <div class="tax-bar-row">
+            <span class="tbr-country" data-i18n="tax.c1">قبرص</span>
+            <div class="tbr-track"><div class="tax-bar-fill" data-width="25%" style="background:var(--gold)"></div></div>
+            <span class="tbr-val text-gold">12.5%</span>
+          </div>
+          <div class="tax-bar-row">
+            <span class="tbr-country" data-i18n="tax.c2">أيرلندا</span>
+            <div class="tbr-track"><div class="tax-bar-fill" data-width="25%" style="background:rgba(201,168,76,0.5)"></div></div>
+            <span class="tbr-val">12.5%</span>
+          </div>
+          <div class="tax-bar-row">
+            <span class="tbr-country" data-i18n="tax.c3">هولندا</span>
+            <div class="tbr-track"><div class="tax-bar-fill" data-width="48%" style="background:rgba(201,168,76,0.25)"></div></div>
+            <span class="tbr-val">25.8%</span>
+          </div>
+          <div class="tax-bar-row">
+            <span class="tbr-country" data-i18n="tax.c4">فرنسا</span>
+            <div class="tbr-track"><div class="tax-bar-fill" data-width="50%" style="background:rgba(201,168,76,0.18)"></div></div>
+            <span class="tbr-val">25%</span>
+          </div>
+          <div class="tax-bar-row">
+            <span class="tbr-country" data-i18n="tax.c5">ألمانيا</span>
+            <div class="tbr-track"><div class="tax-bar-fill" data-width="60%" style="background:rgba(201,168,76,0.12)"></div></div>
+            <span class="tbr-val">~30%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tax-img-wrap">
+        <img src="images/tax-125.png" alt="Cyprus 12.5% corporate tax" class="tax-img" loading="lazy">
+        <p class="tax-img-caption" data-i18n="tax.img_caption">من أدنى معدلات ضريبة الشركات في أوروبا</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — SOCIAL PROOF
+═══════════════════════════════════════ -->
+<section class="section proof-section" id="proof">
+  <div class="section-inner">
+
+    <!-- Stats row -->
+    <div class="proof-stats">
+      <div class="proof-stat">
+        <div class="proof-stat-num">100+</div>
+        <div class="proof-stat-label" data-i18n="proof.l1">شركة مسجّلة</div>
+      </div>
+      <div class="proof-stat-sep"></div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">15+</div>
+        <div class="proof-stat-label" data-i18n="proof.l2">دولة حول العالم</div>
+      </div>
+      <div class="proof-stat-sep"></div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">4.9★</div>
+        <div class="proof-stat-label" data-i18n="proof.l3">متوسط التقييم</div>
+      </div>
+      <div class="proof-stat-sep"></div>
+      <div class="proof-stat">
+        <div class="proof-stat-num">~14</div>
+        <div class="proof-stat-label" data-i18n="proof.l4">يوم متوسط التسليم</div>
+      </div>
+    </div>
+
+    <!-- Country flags -->
+    <div class="proof-countries">
+      <p class="proof-countries-label" data-i18n="proof.countries_label">رواد أعمال من</p>
+      <div class="proof-flags">
+        <span title="Saudi Arabia">🇸🇦</span>
+        <span title="UAE">🇦🇪</span>
+        <span title="Kuwait">🇰🇼</span>
+        <span title="Qatar">🇶🇦</span>
+        <span title="Egypt">🇪🇬</span>
+        <span title="Jordan">🇯🇴</span>
+        <span title="Lebanon">🇱🇧</span>
+        <span title="Turkey">🇹🇷</span>
+        <span title="UK">🇬🇧</span>
+        <span title="Germany">🇩🇪</span>
+        <span title="France">🇫🇷</span>
+        <span title="USA">🇺🇸</span>
+        <span title="Canada">🇨🇦</span>
+        <span title="India">🇮🇳</span>
+        <span title="More">+</span>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="section-tag" style="text-align:center;margin-bottom:12px">Testimonials</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:40px" data-i18n="proof.title">ماذا يقول عملاؤنا</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text" data-i18n="proof.t1_text">"عملية سلسة جداً. أسّست شركتي في قبرص من دبي بدون أي تعقيد. الفريق محترف ومتجاوب. أنصح بشدة."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" data-i18n="proof.t1_avatar">أ</div>
+          <div>
+            <div class="tc-name" data-i18n="proof.t1_name">أحمد المنصوري</div>
+            <div class="tc-meta" data-i18n="proof.t1_meta">مستثمر · الإمارات 🇦🇪</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text" data-i18n="proof.t2_text">"كنت أبحث عن طريقة لتسجيل شركة أوروبية لمشروعي التقني. قبرص كانت الخيار الأمثل من حيث الضريبة والموقع. استغرق الأمر أسبوعين فقط."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" data-i18n="proof.t2_avatar">س</div>
+          <div>
+            <div class="tc-name" data-i18n="proof.t2_name">سارة الزهراني</div>
+            <div class="tc-meta" data-i18n="proof.t2_meta">مؤسِّسة ناشئة تقنية · السعودية 🇸🇦</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text" data-i18n="proof.t3_text">"الخدمة ممتازة والسعر منطقي جداً مقارنة بالبديل. الشركة جاهزة في 12 يوماً. سأستخدم الخدمة مرة أخرى بالتأكيد."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" data-i18n="proof.t3_avatar">م</div>
+          <div>
+            <div class="tc-name" data-i18n="proof.t3_name">محمد العلي</div>
+            <div class="tc-meta" data-i18n="proof.t3_meta">صاحب شركة استشارات · الكويت 🇰🇼</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 — FAQ
+═══════════════════════════════════════ -->
+<section class="section faq-section" id="faq">
+  <div class="section-inner faq-inner">
+    <div>
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title" data-i18n="faq.title">الأسئلة الشائعة</h2>
+      <p class="section-intro" data-i18n="faq.intro">أجوبة على أكثر الأسئلة شيوعاً حول تأسيس شركة في قبرص.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q1">هل أحتاج إلى السفر إلى قبرص؟</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a1">لا، يمكن إتمام إجراءات التأسيس عن بُعد.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q2">كم يستغرق تسجيل الشركة؟</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a2">عادة حوالي أسبوعين بعد استلام المستندات المطلوبة بشكل كامل.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q3">هل السعر يشمل السكرتارية والعنوان؟</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a3">نعم، يشمل 4 أشهر مجاناً سكرتارية وعنوان مسجل.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q4">هل الشركة قانونية ورسمية؟</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a4">نعم، الشركة يتم تسجيلها رسمياً في قبرص ضمن الإطار القانوني المعتمد.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q5">ما الذي أحتاجه للبدء؟</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a5">الاسم المقترح للشركة، نسخة جواز السفر، إثبات عنوان، وبعض البيانات الأساسية.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q6">هل يمكنني الاستفادة من IP Box؟</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-i18n="faq.a6">قد تستفيد بعض الشركات المؤهلة في مجالات البرمجيات أو الملكية الفكرية من IP Box Regime حسب طبيعة النشاط.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 — CONTACT FORM
+═══════════════════════════════════════ -->
+<section class="section contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div class="contact-aside">
+        <div class="section-tag" data-i18n="contact.tag">ابدأ الآن</div>
+        <h2 class="contact-aside-title" data-i18n="form.title">ابدأ تسجيل شركتك الآن</h2>
+        <p data-i18n="form.intro">أرسل بياناتك وسنتواصل معك لبدء إجراءات التأسيس.</p>
+        <div class="contact-trust">
+          <div class="ct-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="contact.t1">شركة قانونية في الاتحاد الأوروبي</span></div>
+          <div class="ct-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="contact.t2">100% عن بُعد بدون سفر</span></div>
+          <div class="ct-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="contact.t3">4 أشهر سكرتارية وعنوان مجاناً</span></div>
+          <div class="ct-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="contact.t4">جاهزة خلال ~أسبوعين</span></div>
+        </div>
+        <div class="contact-aside-proof">
+          <span class="cap-stars">★★★★★</span>
+          <span data-i18n="contact.rating">4.9/5 من 120+ مؤسس</span>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="fname" data-i18n="form.name">الاسم الكامل</label>
+              <input type="text" id="fname" name="name" required placeholder="الاسم الكامل">
+            </div>
+            <div class="form-field">
+              <label for="fphone" data-i18n="form.phone">رقم الهاتف / واتساب</label>
+              <input type="tel" id="fphone" name="phone" required placeholder="رقم الهاتف / واتساب">
+            </div>
+            <div class="form-field">
+              <label for="email" data-i18n="form.email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email" required placeholder="البريد الإلكتروني">
+            </div>
+            <div class="form-field">
+              <label for="fcountry" data-i18n="form.country">البلد الحالي</label>
+              <input type="text" id="fcountry" name="country" placeholder="البلد الحالي">
+            </div>
+            <div class="form-field full">
+              <label for="fcompany" data-i18n="form.company">الاسم المقترح للشركة</label>
+              <input type="text" id="fcompany" name="company" placeholder="الاسم المقترح للشركة">
+            </div>
+            <div class="form-field full">
+              <label for="fbusiness" data-i18n="form.business">نوع النشاط</label>
+              <input type="text" id="fbusiness" name="business" placeholder="نوع النشاط">
+            </div>
+            <div class="form-field full">
+              <label for="fnotes" data-i18n="form.notes">ملاحظات إضافية</label>
+              <textarea id="fnotes" name="notes" placeholder="ملاحظات إضافية"></textarea>
+            </div>
+            <div class="form-submit-row full">
+              <button type="submit" class="btn btn-primary btn-lg" data-i18n="form.submit">ابدأ الآن</button>
+              <div class="form-trust">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span data-i18n="form.trust">لا حاجة للحضور الشخصي. يمكن بدء الإجراءات عن بُعد.</span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div id="formSuccess" hidden class="form-success">
+          <div class="form-success-icon">✅</div>
+          <h3 data-i18n="form.success">تم استلام بياناتك بنجاح. سنتواصل معك قريباً.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 9 — FINAL CTA
+═══════════════════════════════════════ -->
+<section class="final-cta-section">
+  <div class="fcs-content section-inner">
+    <h2 class="section-title" data-i18n="final.title">هل أنت مستعد لتأسيس شركتك الأوروبية؟</h2>
+    <p data-i18n="final.subtitle">ابدأ الآن أو تحدث معنا عبر واتساب للحصول على إجابة سريعة.</p>
+    <div class="fcs-actions">
+      <a href="#contact" class="btn btn-primary btn-lg" data-i18n="final.cta1">ابدأ التسجيل</a>
+      <a href="https://wa.me/357XXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span data-i18n="final.wa_cta">تحدث معنا على واتساب</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p data-i18n="footer.copy">© 2026 Cyprus Company Registration · LAMAR. جميع الحقوق محفوظة.</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="wa-float" href="https://wa.me/357XXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  <span class="wa-tooltip" data-i18n="final.wa_tooltip">تحدث معنا</span>
+</a>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
