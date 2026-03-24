@@ -418,12 +418,13 @@ body.loading { overflow: hidden; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 7px;
 }
 .htp-pill {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 5px 13px; border-radius: 100px;
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 100px;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   font-size: 0.73rem; color: var(--text-2);
   transition: border-color var(--transition), background var(--transition);
+  min-width: 0;
 }
 .htp-pill:hover { border-color: var(--gold-border); background: rgba(201,168,76,0.06); }
 .htp-pill svg { color: var(--gold); flex-shrink: 0; }
@@ -1146,8 +1147,6 @@ footer p { font-size: 0.76rem; color: var(--text-3); }
   .tax-stat-num { font-size: 2rem; }
 }
 @media (max-width: 420px) {
-  .hero-trust-pills { grid-template-columns: 1fr; }
-  .htp-pill { justify-content: flex-start; }
   .section { padding: 48px 14px; }
   .proof-flags span { width: 38px; height: 38px; font-size: 1.25rem; }
   .btn-lg { padding: 14px 28px; font-size: 0.88rem; }
