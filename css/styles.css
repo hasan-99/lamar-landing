@@ -1120,10 +1120,17 @@ footer p { font-size: 0.76rem; color: var(--text-3); }
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .header-inner { padding: 0 20px; gap: 12px; }
+  /* Hide header CTA on mobile — use hamburger menu instead */
+  .header-actions .btn { display: none; }
   .section { padding: 76px 24px; }
   .why-header { padding: 80px 24px 64px; }
   .why-cards { padding: 0 24px 76px; }
   .section-intro { margin-bottom: 36px; }
+}
+@media (max-width: 400px) {
+  .header-inner { padding: 0 14px; }
+  .logo { font-size: 0.9rem; letter-spacing: 2px; }
 }
 @media (max-width: 640px) {
   .section { padding: 56px 16px; }
