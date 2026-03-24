@@ -1143,6 +1143,9 @@ footer p { font-size: 0.76rem; color: var(--text-3); }
   .fcs-actions .btn { width: 100%; max-width: 340px; }
   .final-cta-section { padding: 80px 20px; }
   .tax-stats-row { flex-direction: column; gap: 14px; padding: 22px 20px; }
+  .hero-trust-pills { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 100%; }
+  .htp-pill { font-size: 0.68rem; padding: 6px 10px; }
+  .htp-pill svg { width: 10px; height: 10px; flex-shrink: 0; }
   .tax-stat-divider { width: 60px; height: 1px; }
   .tax-stat-num { font-size: 2rem; }
 }
