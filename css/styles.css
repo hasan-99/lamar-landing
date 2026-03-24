@@ -1122,9 +1122,44 @@ footer p { font-size: 0.76rem; color: var(--text-3); }
   .hamburger { display: flex; }
   .section { padding: 76px 24px; }
   .why-header { padding: 80px 24px 64px; }
+  .why-cards { padding: 0 24px 76px; }
+  .section-intro { margin-bottom: 36px; }
 }
 @media (max-width: 640px) {
-  .section { padding: 60px 20px; }
-  .why-header { padding: 64px 20px 52px; }
+  .section { padding: 56px 16px; }
+  .why-header { padding: 60px 16px 48px; }
+  .why-cards { padding: 0 16px 60px; }
   .proof-stats { border-radius: var(--radius); }
+  .section-intro { font-size: 0.9rem; margin-bottom: 28px; }
+  .fcs-actions { flex-direction: column; align-items: center; }
+  .fcs-actions .btn { width: 100%; max-width: 340px; }
+  .final-cta-section { padding: 80px 20px; }
+  .tax-stats-row { flex-direction: column; gap: 14px; padding: 22px 20px; }
+  .tax-stat-divider { width: 60px; height: 1px; }
+  .tax-stat-num { font-size: 2rem; }
+}
+@media (max-width: 420px) {
+  .hero-trust-pills { grid-template-columns: 1fr; }
+  .htp-pill { justify-content: flex-start; }
+  .section { padding: 48px 14px; }
+  .proof-flags span { width: 38px; height: 38px; font-size: 1.25rem; }
+  .btn-lg { padding: 14px 28px; font-size: 0.88rem; }
+  .features-grid { grid-template-columns: 1fr; }
+  .price-tag { font-size: 2.2rem; }
+}
+
+/* WhatsApp float: tooltip above on mobile */
+@media (max-width: 640px) {
+  .wa-float { bottom: 20px; left: 16px; width: 50px; height: 50px; }
+  [dir="rtl"] .wa-float { left: auto; right: 16px; }
+  .wa-tooltip {
+    left: 50%; bottom: calc(100% + 10px);
+    transform: translateX(-50%);
+  }
+  [dir="rtl"] .wa-tooltip { left: 50%; right: auto; transform: translateX(-50%); }
+}
+
+/* Hero badge hidden on tablet/mobile */
+@media (max-width: 960px) {
+  .hero-badge { display: none !important; }
 }
